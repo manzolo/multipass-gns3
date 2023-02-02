@@ -1,0 +1,9 @@
+config/hosts
+env
+images
+projects
+volume/*
+config/*
+
+!volume/.gitkeep
+!config/.gitkeep
