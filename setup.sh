@@ -18,6 +18,7 @@ VM_RDP_PATH=/home/$USERNAME
 
 #Prepare sh files
 echo "sudo usermod -aG docker ${USERNAME}" > $(dirname $0)/script/__run_vm.sh
+echo "sudo usermod -aG kvm ${USERNAME}" >> $(dirname $0)/script/__run_vm.sh
 echo "echo \"/usr/bin/setxkbmap it\" | sudo tee -a $VM_RDP_PATH/.profile > /dev/null" >> $(dirname $0)/script/__run_vm.sh
 echo "echo \"/usr/bin/setxkbmap it\" | sudo tee -a $VM_RDP_PATH/.bashrc  > /dev/null" >> $(dirname $0)/script/__run_vm.sh
 echo "sudo mkdir -p $VM_RDP_PATH/.config/autostart" >> $(dirname $0)/script/__run_vm.sh

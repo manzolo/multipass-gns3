@@ -2,8 +2,10 @@ config/hosts
 env
 images
 projects
-volume/*
-config/*
+volume
+config
 
+!images/.gitkeep
+!projects/.gitkeep
 !volume/.gitkeep
 !config/.gitkeep

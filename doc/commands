@@ -10,7 +10,7 @@ ip address 10.0.3.1 255.255.0.0
 no shutdown
 
 # VPCs:
-ip  10.0.0.1 255.255.0.0 10.0.2.1
+ip 10.0.0.1 255.255.0.0 10.0.2.1
 
 ## obtain an ip from dhcp
 dhcp
@@ -98,9 +98,10 @@ end
 wr
 
 # NAT
+ #f0/0
  ip nat outside
 
+ #f1/0
  ip nat inside
  access-list 9 permit 192.168.1.0 0.0.0.255
- ip nat inside source list 9 int f1/0 overload
-
+ ip nat inside source list 9 int f0/0 overload
